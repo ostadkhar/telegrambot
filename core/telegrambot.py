@@ -94,7 +94,7 @@ class TelegramBot:
                 balance = self.exchange.free_balance
 
                 msg = "You don't have any available balance" if len(balance) == 0 \
-                    else f"Your available balance:\n{formatter.format_balance(balance)}"
+                    else "Your available balance:\n{formatter.format_balance(balance)}"
 
                 bot.edit_message_text(text=msg,
                                       chat_id=query.message.chat_id,
